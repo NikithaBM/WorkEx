@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_image">login image</string>
+    <string name="name">Name</string>
+    <string name="sign_up">Sign up</string>
+    <string name="mobile">Mobile</string>
+    <string name="about_me">About Me</string>
+    <string name="sridha_saha">Sridha Saha</string>
+</resources>

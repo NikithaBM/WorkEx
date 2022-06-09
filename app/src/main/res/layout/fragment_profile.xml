@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.ProfileFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivProfile"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/workex"
+        android:contentDescription="Image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="89dp"
+        android:layout_height="84dp"
+        android:translationY="-20dp"
+        android:padding="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfile"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        app:srcCompat="@drawable/pic_holder" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sridha_saha"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProfilePic" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDetails"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:text="Recruiter/Sourcing Specialist hiring mandates who work on big ideas that center around cutting edge technologies."
+        android:lines="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc"
+        android:gravity="center_horizontal|center" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llEmailMobile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetails"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/llEmail"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEmail"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:text="Email"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEmailAdd"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:text="sridha@workex.in"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#DADADA"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/llMobile"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvMobile"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:text="Mobile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvMobileNo"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:text="9041225639"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tvKeySkills"
+    android:text="Key Skills"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.1"
+    app:layout_constraintTop_toBottomOf="@id/llEmailMobile"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="30dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chip_group"
+        app:chipSpacingHorizontal="20sp"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvKeySkills">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            app:chipStrokeColor="#DADADA"
+            app:chipStrokeWidth="1dp"
+            android:checkable="false"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
+            android:id="@+id/chip1"
+            android:text="C#/.NET"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chip2"
+            android:backgroundTint="@color/white"
+            app:chipStrokeColor="#DADADA"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
+            app:chipStrokeWidth="1dp"
+            android:checkable="false"
+            android:text="Javascript"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chip3"
+            android:backgroundTint="@color/white"
+            app:chipStrokeColor="#DADADA"
+            app:chipStrokeWidth="1dp"
+            android:checkable="false"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
+            android:text="Angular"/>
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chip4"
+            android:backgroundTint="@color/white"
+            app:chipStrokeColor="#DADADA"
+            android:checkable="false"
+            app:chipStrokeWidth="1dp"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
+            android:text="CSS"/>
+        <com.google.android.material.chip.Chip
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chip5"
+            app:chipStartPadding="20dp"
+            app:chipEndPadding="20dp"
+            android:backgroundTint="@color/white"
+            app:chipStrokeColor="#DADADA"
+            app:chipStrokeWidth="1dp"
+            android:checkable="false"
+        android:text="Html"/>
+    </com.google.android.material.chip.ChipGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
